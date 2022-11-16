@@ -1,0 +1,132 @@
+start 
+declarr A 4
+declarr B 4
+declscal C
+declscal I
+pushi 0
+popscal C
+pushi 4
+popscal I
+label LOOPTOP1
+pushscal I
+pushi 1
+negate 
+add 
+dup 
+popscal I
+dup 
+poparr A
+pushscal I
+pushi 4
+add 
+pushscal I
+poparr B
+pushscal I
+jumpnzero LOOPTOP1
+pushi 4
+popscal I
+label LOOPTOP2
+pushscal I
+pushi 1
+negate 
+add 
+dup 
+popscal I
+dup 
+pusharr A 
+swap 
+pusharr B 
+mul 
+pushscal C
+add 
+popscal C
+pushscal I
+jumpnzero LOOPTOP2
+pushscal C
+prints dot_product_value_is:
+printtos 
+exit 
+end 
+
+start 
+A 4
+declarr A 4
+A 4
+declarr B 4
+A 4
+declscal C
+A 4
+declscal I
+A 4
+pushi 0
+A 4
+popscal C
+A 4
+pushi 4
+A 4
+popscal I
+A 4
+label LOOPTOP1
+A 4
+pushscal I
+A 4
+pushi 1
+negate 
+add 
+dup 
+A 4
+popscal I
+dup 
+A 4
+poparr A
+A 4
+pushscal I
+A 4
+pushi 4
+add 
+A 4
+pushscal I
+A 4
+poparr B
+A 4
+pushscal I
+A 4
+jumpnzero LOOPTOP1
+A 4
+pushi 4
+A 4
+popscal I
+A 4
+label LOOPTOP2
+A 4
+pushscal I
+A 4
+pushi 1
+negate 
+add 
+dup 
+A 4
+popscal I
+dup 
+A 4
+pusharr A 
+swap 
+A 4
+pusharr B 
+mul 
+A 4
+pushscal C
+add 
+A 4
+popscal C
+A 4
+pushscal I
+A 4
+jumpnzero LOOPTOP2
+A 4
+pushscal C
+A 4
+prints dot_product_value_is:
+printtos 
+exit 
+end 

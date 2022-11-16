@@ -1,5 +1,5 @@
 #include "virtualMachine.hpp"
-#include "opCodeBase.hpp"
+#include "baseStatement.hpp"
 #include <vector>
 #include <iostream>
 
@@ -21,7 +21,27 @@ virtualMachine& virtualMachine::get_instance(std::vector<std::pair<std::string, 
     return *single;
 }
 
+void virtualMachine::set_buffer(std::unique_ptr<instructionBuffer> &buffer_)
+{
+    buffer = std::move(buffer_);
+}
+
 void virtualMachine::translate()
 {
-
+    std::vector <std::string> tokens; // Hold the individual items from the second string
+    for (int i = 0; i < input.size(); i++)
+    {
+        /* Split the raw input into two different values */
+        std::string first = input[i].first;
+        std::string second = input[i].second;
+        if(second != "")
+        {
+            // Grab the label from the argument string
+            tokens.push_back(second.substr(0, second.find(" ")));
+            tokens.push_back(second.substr(second.find(" ") + 1, second.size()));
+            std::cout << tokens[0] << " " << tokens[1] << std::endl;
+        }
+        std::cout << first << " " << second << std::endl;
+        
+    }
 }

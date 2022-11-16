@@ -1,0 +1,27 @@
+// in main.cpp of the parser to open the binary file
+
+   std::string prefix = std::string(argv[1]);
+   std::string outFileName = prefix + ".out";
+
+   std::ofstream outFile(outFileName, std::ios::out | std::ios::binary);
+
+// in Stringbuffer to dump the buffer
+void StringBuffer::serialize(std::ofstream& f) { 
+   int length = buffer.size( );
+   f.write((char*)(&length), sizeof(int));
+   for (int i = 0; i < length; i++) {
+      int strLength = buffer[i].size( );
+      f.write((char*)(&strLength), sizeof(int));
+      f.write( buffer[i].c_str(), sizeof(char)*strLength);
+   }
+}
+
+
+// JumpZero code to dump that instruction
+void JumpZero::serialize(std::ofstream& outFile) {
+   outFile.write((char*) &opCode, sizeof(int));
+   outFile.write((char*) &opnd, sizeof(int));
+}
+
+// main.cpp code to close the file
+   outFile.close( );

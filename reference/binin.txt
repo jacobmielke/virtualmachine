@@ -1,0 +1,47 @@
+// main.cpp opening the file
+   std::ifstream binaryFile(argv[1]);
+
+   if (!binaryFile.is_open( )) {
+      std::cout << "failed to open file " << argv[1] << ", terminating" << std::endl;
+      return -1;
+   }
+
+// Code to read in the string table info
+StringTable::StringTable(std::ifstream& inFile) {
+
+   strings.clear( ); ;
+
+   int numString;
+   inFile.read((char*) &numString, 4);
+   for (int i = 0; i < numString; i++) {
+      int strLength;
+      inFile.read((char*) &strLength, 4);
+      char charStr[strLength];
+      inFile.read(charStr, strLength);
+      std::string s(charStr, strLength);
+      strings.push_back(s);
+   }
+}
+
+// This code is from the InstructionMemory constructor 
+// and shows how statements are created and added to the constructor
+InstructionMemory::InstructionMemory(std::ifstream& inFile) {
+   // not all code for the constructor is shown.
+   // this reads in the number of instructions to bound the loop
+   // and calls the instruction factory, passing it infile
+   inFile.read((char*) &numInst, 4);
+   for (int i = 0; i < numInst; i++) {
+      std::shared_ptr<Instruction> s = InstructionFactory::makeInstruction(inFile);
+      memoryCells.push_back(s);
+   }
+} 
+
+// in the InstructionFactory I read the opcode
+   f.read((char*) &opcode, sizeof(int));
+
+// and use that to select an instruction to build
+// in this case, we're reading an OP_JUMP and it's opcode
+   } else if (opcode == OP_JUMP) {       
+      int target;
+      f.read((char*) &target, sizeof(int));
+      s = std::make_shared<Jump>(Jump(opcode, target));

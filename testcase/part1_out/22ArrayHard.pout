@@ -1,0 +1,61 @@
+start 
+gosub L1
+jump L2
+gosublabel L1
+declarr A 2
+declarr B 2
+pushi 4
+pushi 8
+pushi 1
+poparr A
+pushi 0
+poparr B
+pushi 1
+pusharr A
+pushi 0
+pusharr B
+return 
+label L2
+printtos 
+printtos 
+exit 
+end 
+
+start 
+L1 L1
+gosub L1
+L1 L1
+jump L2
+L1 L1
+gosublabel L1
+L1 L1
+declarr A 2
+L1 L1
+declarr B 2
+L1 L1
+pushi 4
+L1 L1
+pushi 8
+L1 L1
+pushi 1
+L1 L1
+poparr A
+L1 L1
+pushi 0
+L1 L1
+poparr B
+L1 L1
+pushi 1
+L1 L1
+pusharr A
+L1 L1
+pushi 0
+L1 L1
+pusharr B
+return 
+L1 L1
+label L2
+printtos 
+printtos 
+exit 
+end 

@@ -1,0 +1,21 @@
+start 
+declscal A
+pushi 4
+popscal A
+pushscal A
+printtos 
+exit 
+end 
+
+start 
+A A
+declscal A
+A A
+pushi 4
+A A
+popscal A
+A A
+pushscal A
+printtos 
+exit 
+end 

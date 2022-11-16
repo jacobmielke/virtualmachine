@@ -1,0 +1,13 @@
+start 
+pushi 2
+pushi 6
+exit 
+end 
+
+start 
+2 2
+pushi 2
+2 2
+pushi 6
+exit 
+end 

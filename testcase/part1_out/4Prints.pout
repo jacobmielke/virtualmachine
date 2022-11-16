@@ -1,0 +1,20 @@
+start 
+pushi 2
+pushi 6
+add 
+prints 2+6=
+printtos 
+exit 
+end 
+
+start 
+2 2
+pushi 2
+2 2
+pushi 6
+add 
+2 2
+prints 2+6=
+printtos 
+exit 
+end 

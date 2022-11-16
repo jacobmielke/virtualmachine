@@ -1,0 +1,71 @@
+start 
+pushi 3
+gosub FIB
+printtos 
+jump EXIT
+gosublabel FIB
+declscal A
+prints in_FIB
+dup 
+popscal A
+pushi 1
+negate 
+add 
+dup 
+jumpzero FIBL0
+gosub FIB
+pushscal A
+mul 
+jump FIBL1
+label FIBL0
+pop 
+pushi 1
+label FIBL1
+return 
+label EXIT
+exit 
+end 
+
+start 
+3 3
+pushi 3
+3 3
+gosub FIB
+printtos 
+3 3
+jump EXIT
+3 3
+gosublabel FIB
+3 3
+declscal A
+3 3
+prints in_FIB
+dup 
+3 3
+popscal A
+3 3
+pushi 1
+negate 
+add 
+dup 
+3 3
+jumpzero FIBL0
+3 3
+gosub FIB
+3 3
+pushscal A
+mul 
+3 3
+jump FIBL1
+3 3
+label FIBL0
+pop 
+3 3
+pushi 1
+3 3
+label FIBL1
+return 
+3 3
+label EXIT
+exit 
+end 

@@ -1,0 +1,12 @@
+start 
+pushi 2
+printtos 
+exit 
+end 
+
+start 
+2 2
+pushi 2
+printtos 
+exit 
+end 

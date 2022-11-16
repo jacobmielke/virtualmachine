@@ -1,0 +1,42 @@
+start 
+declscal A
+pushi 4
+gosub L1
+jump L2
+gosublabel L1
+declscal A
+popscal A
+pushscal A
+return 
+label L2
+popscal A
+prints exit_pgm
+exit 
+end 
+
+start 
+A A
+declscal A
+A A
+pushi 4
+A A
+gosub L1
+A A
+jump L2
+A A
+gosublabel L1
+A A
+declscal A
+A A
+popscal A
+A A
+pushscal A
+return 
+A A
+label L2
+A A
+popscal A
+A A
+prints exit_pgm
+exit 
+end 

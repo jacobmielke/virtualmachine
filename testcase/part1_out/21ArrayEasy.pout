@@ -1,0 +1,41 @@
+start 
+pushi 99
+gosub L1
+jump L2
+gosublabel L1
+declarr A 3
+pushi 1
+poparr A
+pushi 1
+pusharr A
+return 
+label L2
+printtos 
+exit 
+end 
+
+start 
+99 99
+pushi 99
+99 99
+gosub L1
+99 99
+jump L2
+99 99
+gosublabel L1
+99 99
+declarr A 3
+99 99
+pushi 1
+99 99
+poparr A
+99 99
+pushi 1
+99 99
+pusharr A
+return 
+99 99
+label L2
+printtos 
+exit 
+end 

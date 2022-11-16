@@ -1,0 +1,10 @@
+start 
+label L1
+exit 
+end 
+
+start 
+L1 L1
+label L1
+exit 
+end 

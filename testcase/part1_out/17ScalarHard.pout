@@ -1,0 +1,49 @@
+start 
+gosub L1
+jump L2
+gosublabel L1
+declscal A
+declscal B
+pushi 4
+pushi 8
+popscal A
+popscal B
+pushscal A
+pushscal B
+return 
+label L2
+printtos 
+printtos 
+exit 
+end 
+
+start 
+L1 L1
+gosub L1
+L1 L1
+jump L2
+L1 L1
+gosublabel L1
+L1 L1
+declscal A
+L1 L1
+declscal B
+L1 L1
+pushi 4
+L1 L1
+pushi 8
+L1 L1
+popscal A
+L1 L1
+popscal B
+L1 L1
+pushscal A
+L1 L1
+pushscal B
+return 
+L1 L1
+label L2
+printtos 
+printtos 
+exit 
+end 

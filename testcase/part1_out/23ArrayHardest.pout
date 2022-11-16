@@ -1,0 +1,67 @@
+start 
+declarr A 7
+declarr B 1
+gosub L1
+jump L2
+gosublabel L1
+declarr A 7
+declarr B 1
+pushi 4
+pushi 8
+pushi 2
+poparr A
+pushi 0
+poparr B
+pushi 2
+pusharr A
+pushi 0
+pusharr B
+return 
+label L2
+printtos 
+printtos 
+exit 
+end 
+
+start 
+A 7
+declarr A 7
+A 7
+declarr B 1
+A 7
+gosub L1
+A 7
+jump L2
+A 7
+gosublabel L1
+A 7
+declarr A 7
+A 7
+declarr B 1
+A 7
+pushi 4
+A 7
+pushi 8
+A 7
+pushi 2
+A 7
+poparr A
+A 7
+pushi 0
+A 7
+poparr B
+A 7
+pushi 2
+A 7
+pusharr A
+A 7
+pushi 0
+A 7
+pusharr B
+return 
+A 7
+label L2
+printtos 
+printtos 
+exit 
+end 

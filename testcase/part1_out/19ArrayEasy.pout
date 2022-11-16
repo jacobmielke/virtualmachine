@@ -1,0 +1,27 @@
+start 
+declarr A 3
+pushi 4
+pushi 2
+poparr A 
+pushi 2
+pusharr A 
+printtos 
+exit 
+end 
+
+start 
+A 3
+declarr A 3
+A 3
+pushi 4
+A 3
+pushi 2
+A 3
+poparr A 
+A 3
+pushi 2
+A 3
+pusharr A 
+printtos 
+exit 
+end 

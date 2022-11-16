@@ -1,0 +1,27 @@
+start 
+gosub L1
+prints this_should_print
+jump endlabel
+gosublabel L1
+prints print_in_subroutine_should_print
+return 
+label endlabel
+exit 
+end 
+
+start 
+L1 L1
+gosub L1
+L1 L1
+prints this_should_print
+L1 L1
+jump endlabel
+L1 L1
+gosublabel L1
+L1 L1
+prints print_in_subroutine_should_print
+return 
+L1 L1
+label endlabel
+exit 
+end 

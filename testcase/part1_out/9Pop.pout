@@ -1,0 +1,17 @@
+start 
+pushi 6
+pushi 7
+pop 
+printtos 
+exit 
+end 
+
+start 
+6 6
+pushi 6
+6 6
+pushi 7
+pop 
+printtos 
+exit 
+end 

@@ -1,4 +1,0 @@
-start
-push L1 1
-sample 2 2 2 2
-exit        22222
