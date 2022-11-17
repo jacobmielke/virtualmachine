@@ -1,21 +1,17 @@
-PRINTING PLAIN INSTRUCTION BUFFER FROM A POUT FILE
-this_should_print 
-print_in_subroutine_should_print 
-Start 0
-GoSub 4
-Prints 0
-Jump 7
-GoSubLabel 0
-Prints 1
-Return 
-Exit 
-this_should_print 
-print_in_subroutine_should_print 
-Start 0
-GoSub 4
-Prints 0
-Jump 7
-GoSubLabel 0
-Prints 1
-Return 
-Exit 
+PRINTING INSTRUCTION BUFFER
+OP_START_PROGRAM
+OP_GOSUB
+OP_PRINTS
+OP_JUMP
+OP_ENTER_SUBROUTINE
+OP_PRINTS
+OP_RETURN
+OP_EXIT
+OP_START_PROGRAM
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP

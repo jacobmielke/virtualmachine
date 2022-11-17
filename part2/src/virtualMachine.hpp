@@ -23,12 +23,14 @@ private:
     std::vector<std::string> data_table;
     
     /* Virtual Machine Functions */
+    void execute(int); // Execute the instruction at the given index
     void start();
     void end();
     void pushi();
 
     /* Lookup Tables */
     std::map<std::string, int> uppercase_to_id;
+    std::map<std::string, std::string> out_to_uppercase;
 
 public:
     /* Singleton */
@@ -43,10 +45,11 @@ public:
     void plain_to_instruction_buffer(); // Transfer the data from the parser to the virtual machine
 
     /* Virtual Machine Runtime Actions */
-    void execute(int); // Execute the instruction at the given index
+    void run(); // Run the virtual machine
     bool check_buffer();
     void print_buffer();
     void print_plain_instruction_buffer();
+    void print_string_table();
 
 
 };

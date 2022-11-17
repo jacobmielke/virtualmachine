@@ -1,41 +1,33 @@
-PRINTING PLAIN INSTRUCTION BUFFER FROM A POUT FILE
-this_should_print_1 
-this_should_not_print_1 
-this_should_not_print_2 
-this_should_print_2 
-Start 0
-PushI 1
-Dup 
-JumpZero 6
-Prints 0
-Jump 7
-Prints 1
-Dup 
-PushI 1
-Negate 
-Add 
-JumpZero 14
-Prints 2
-Jump 15
-Prints 3
-Exit 
-this_should_print_1 
-this_should_not_print_1 
-this_should_not_print_2 
-this_should_print_2 
-Start 0
-PushI 1
-Dup 
-JumpZero 6
-Prints 0
-Jump 7
-Prints 1
-Dup 
-PushI 1
-Negate 
-Add 
-JumpZero 14
-Prints 2
-Jump 15
-Prints 3
-Exit 
+PRINTING INSTRUCTION BUFFER
+OP_START_PROGRAM
+OP_PUSHI
+OP_DUP
+OP_JUMPZERO
+OP_PRINTS
+OP_JUMP
+OP_PRINTS
+OP_DUP
+OP_PUSHI
+OP_NEGATE
+OP_ADD
+OP_JUMPZERO
+OP_PRINTS
+OP_JUMP
+OP_PRINTS
+OP_EXIT
+OP_START_PROGRAM
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP

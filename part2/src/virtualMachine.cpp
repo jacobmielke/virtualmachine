@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 #include <memory>
-#include "sStart.hpp"
 // Use smart pointers to manage memory
 virtualMachine* virtualMachine::single = nullptr;
 
@@ -36,6 +35,28 @@ virtualMachine::virtualMachine(std::vector<std::pair<std::string, std::string>> 
     uppercase_to_id["OP_PRINTS"] = 20;
     uppercase_to_id["OP_PRINTTOS"] = 21;
 
+    out_to_uppercase["Start"] = "OP_START_PROGRAM";
+    out_to_uppercase["Exit"] = "OP_EXIT";
+    out_to_uppercase["PushI"] = "OP_PUSHI";
+    out_to_uppercase["Jump"] = "OP_JUMP";
+    out_to_uppercase["JumpZero"] = "OP_JUMPZERO";
+    out_to_uppercase["JumpNZero"] = "OP_JUMPNZERO";
+    out_to_uppercase["GoSub"] = "OP_GOSUB";
+    out_to_uppercase["PrintTOS"] = "OP_PRINTTOS";
+    out_to_uppercase["Add"] = "OP_ADD";
+    out_to_uppercase["Negate"] = "OP_NEGATE";
+    out_to_uppercase["Mul"] = "OP_MUL";
+    out_to_uppercase["Div"] = "OP_DIV";
+    out_to_uppercase["Prints"] = "OP_PRINTS";
+    out_to_uppercase["Dup"] = "OP_DUP";
+    out_to_uppercase["Swap"] = "OP_SWAP";
+    out_to_uppercase["GoSub"] = "OP_GOSUB";
+    out_to_uppercase["GoSubLabel"] = "OP_ENTER_SUBROUTINE";
+    out_to_uppercase["PopScalar"] = "OP_POP_SCALAR";
+    out_to_uppercase["PopArray"] = "OP_POP_ARRAY";
+    out_to_uppercase["PushScalar"] = "OP_PUSHSCALAR";
+    out_to_uppercase["PushArray"] = "OP_PUSHARRAY";
+    out_to_uppercase["Return"] = "OP_RETURN";
 }
 
 virtualMachine& virtualMachine::get_instance(std::vector<std::pair<std::string, std::string>>  input_lines)
@@ -92,96 +113,63 @@ void virtualMachine::plain_to_instruction_buffer()
             split.second = second.substr(second.find(" ") + 1, second.length()); 
         }
         create_buffer_entry(first, split);
-        std::cout << first << " " << second << std::endl;
+        //std::cout << first << " " << second << std::endl;
     }
 }
 
 void virtualMachine::create_buffer_entry(const std::string name, std::pair<const std::string, const std::string> args)
 {
-    if (name == "Start")
+    // Check if name is in the lookup table
+    if (out_to_uppercase.find(name) != out_to_uppercase.end())
     {
-        // Create a new start statement
-        std::unique_ptr<baseStatement> t = std::make_unique<sStart>(name, "OP_START_PROGRAM");
+        std::string uppername = out_to_uppercase[name];
+        std::unique_ptr<baseStatement> t = std::make_unique<baseStatement>(name, uppername, args);
         instruction_buffer.push_back(std::move(t));
     }
-    else if (name == "Exit")
-    {
-
-    }
-    else if (name == "PushI")
-    {
-        
-    }
-    else if (name == "PrintTOS")
-    {
-
-    }
-    else if (name == "Add")
-    {
-        
-    }
-    else if (name == "Prints")
-    {
-
-    }
-    else if (name == "Div")
-    {
-
-    }
-    else if (name == "Dup")
-    {
-
-    }
-    else if (name == "Mul")
-    {
-
-    }
-    else if (name == "Swap")
-    {
-
-    }
-    else if (name == "Jump")
-    {
-
-    }
-    else if (name == "GoSub")
-    {
-
-    }
-    else if (name == "GoSubLabel")
-    {
-
-    }
-    else if (name == "PopScalar")
-    {
-
-    }
-    else if (name == "PushScalar")
-    {
-
-    }
-    else if (name == "PopArray")
-    {
-
-    }
-    else if (name == "PushArray")
-    {
-
-    }
-    else if (name == "Negate")
-    {
-
-    }
-    else if (name == "JumpNZero")
-    {
-
-    }
-    else if (name == "Return")
-    {
-
-    }
-    else 
+    else
     {
         string_table.push_back(name);
+    }
+
+}
+
+void virtualMachine::print_string_table()
+{
+    std::cout << "PRINTING STRING TABLE" << std::endl;
+    for (int i = 0; i < string_table.size(); i++)
+    {
+        std::cout << string_table[i] << std::endl;
+    }
+}
+
+void virtualMachine::run()
+{
+    int function_id = 0;
+    while(pc < instruction_buffer.size())
+    {
+        function_id = uppercase_to_id[instruction_buffer[pc]->get_uppername()];
+        execute(function_id);
+        pc++;
+    }
+}
+
+void virtualMachine::execute(int id)
+{
+    switch (id)
+    {
+    case 0:
+        std::cout << "OP_START_PROGRAM" << std::endl;
+        break;
+    case 1:
+        std::cout << "" << std::endl;
+        break;
+    case 2:
+        
+    case 3:
+        pc = stoi(instruction_buffer[pc]->get_args().second);
+        break;
+    default:
+        std::cout << "STUMP" << std::endl;
+        break;
     }
 }

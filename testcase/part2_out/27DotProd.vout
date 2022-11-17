@@ -1,87 +1,85 @@
-PRINTING PLAIN INSTRUCTION BUFFER FROM A POUT FILE
-dot_product_value_is: 
-Start 10
-PushI 0
-PopScalar 8
-PushI 4
-PopScalar 9
-PushScalar 9
-PushI 1
-Negate 
-Add 
-Dup 
-PopScalar 9
-Dup 
-PopArray 0
-PushScalar 9
-PushI 4
-Add 
-PushScalar 9
-PopArray 4
-PushScalar 9
-JumpNZero 5
-PushI 4
-PopScalar 9
-PushScalar 9
-PushI 1
-Negate 
-Add 
-Dup 
-PopScalar 9
-Dup 
-PushArray 0
-Swap 
-PushArray 4
-Mul 
-PushScalar 8
-Add 
-PopScalar 8
-PushScalar 9
-JumpNZero 22
-PushScalar 8
-Prints 0
-PrintTOS 
-Exit 
-dot_product_value_is: 
-Start 10
-PushI 0
-PopScalar 8
-PushI 4
-PopScalar 9
-PushScalar 9
-PushI 1
-Negate 
-Add 
-Dup 
-PopScalar 9
-Dup 
-PopArray 0
-PushScalar 9
-PushI 4
-Add 
-PushScalar 9
-PopArray 4
-PushScalar 9
-JumpNZero 5
-PushI 4
-PopScalar 9
-PushScalar 9
-PushI 1
-Negate 
-Add 
-Dup 
-PopScalar 9
-Dup 
-PushArray 0
-Swap 
-PushArray 4
-Mul 
-PushScalar 8
-Add 
-PopScalar 8
-PushScalar 9
-JumpNZero 22
-PushScalar 8
-Prints 0
-PrintTOS 
-Exit 
+PRINTING INSTRUCTION BUFFER
+OP_START_PROGRAM
+OP_PUSHI
+OP_POP_SCALAR
+OP_PUSHI
+OP_POP_SCALAR
+OP_PUSHSCALAR
+OP_PUSHI
+OP_NEGATE
+OP_ADD
+OP_DUP
+OP_POP_SCALAR
+OP_DUP
+OP_POP_ARRAY
+OP_PUSHSCALAR
+OP_PUSHI
+OP_ADD
+OP_PUSHSCALAR
+OP_POP_ARRAY
+OP_PUSHSCALAR
+OP_JUMPNZERO
+OP_PUSHI
+OP_POP_SCALAR
+OP_PUSHSCALAR
+OP_PUSHI
+OP_NEGATE
+OP_ADD
+OP_DUP
+OP_POP_SCALAR
+OP_DUP
+OP_PUSHARRAY
+OP_SWAP
+OP_PUSHARRAY
+OP_MUL
+OP_PUSHSCALAR
+OP_ADD
+OP_POP_SCALAR
+OP_PUSHSCALAR
+OP_JUMPNZERO
+OP_PUSHSCALAR
+OP_PRINTS
+OP_PRINTTOS
+OP_EXIT
+OP_START_PROGRAM
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP
+STUMP

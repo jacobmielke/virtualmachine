@@ -16,3 +16,8 @@ std::string baseStatement::get_uppername()
 {
     return uppername;
 }
+
+std::pair<std::string, std::string> baseStatement::get_args()
+{
+    return args;
+}

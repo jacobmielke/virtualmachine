@@ -13,7 +13,12 @@ int main(int argc, char *argv[]) {
 
     /* Create the virtual machine */
     virtualMachine& vm = virtualMachine::get_instance(parser.instruction_codes);
-    virtualMachine& vm2 = vm;
-    vm.print_plain_instruction_buffer();
+    //vm.print_plain_instruction_buffer();
     vm.plain_to_instruction_buffer(); // Convert the plain instruction buffer to the instruction buffer
+    vm.print_buffer();
+
+    /* Execute the instructions */
+    vm.run();
+    
+    return 0;
 }
