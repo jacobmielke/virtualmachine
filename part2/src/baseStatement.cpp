@@ -1,10 +1,10 @@
 #include "baseStatement.hpp"
 #include <string>
 #include "virtualMachine.hpp"
-baseStatement::baseStatement(std::string _lowername, std::string _uppername) : lowername(_lowername), uppername(_uppername)
-{
-    // std::cout << "baseStatement constructor" << std::endl;
-}
+baseStatement::baseStatement(std::string _lowername, std::string _uppername, std::pair<const std::string, const std::string>_args) 
+: lowername(_lowername), uppername(_uppername), args(_args) {}
+
+
 
 
 std::string baseStatement::get_lowername()

@@ -18,15 +18,14 @@ private:
     /* Virtual Machine Runtime Actions */
     std::vector<std::unique_ptr<baseStatement>> instruction_buffer;
     int pc = 0; 
-    std::vector<std::string> runtime_stack;
+    int stack_frame = 0;
+    std::vector<int> runtime_stack;
     std::vector<std::string> string_table;
-    std::vector<std::string> data_table;
-    
+    std::vector<int> return_stack;
+    std::vector<std::vector<int>> data_memory;
+
     /* Virtual Machine Functions */
     void execute(int); // Execute the instruction at the given index
-    void start();
-    void end();
-    void pushi();
 
     /* Lookup Tables */
     std::map<std::string, int> uppercase_to_id;
@@ -48,6 +47,8 @@ public:
     void run(); // Run the virtual machine
     bool check_buffer();
     void print_buffer();
+    void print_memory();
+    void print_runtime_stack();
     void print_plain_instruction_buffer();
     void print_string_table();
 

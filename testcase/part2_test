@@ -11,4 +11,5 @@ do
    rm ../part2_out/$f.vout
    echo $f 
    ../../part2/part2 $f.pout > ../part2_out/$f.vout
+   diff $f.vout ../part2_out/$f.vout
 done
