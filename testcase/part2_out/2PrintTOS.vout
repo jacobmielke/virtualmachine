@@ -1,0 +1,9 @@
+PRINTING PLAIN INSTRUCTION BUFFER FROM A POUT FILE
+Start 0
+PushI 2
+PrintTOS 
+Exit 
+Start 0
+PushI 2
+PrintTOS 
+Exit 

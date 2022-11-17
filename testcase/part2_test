@@ -10,5 +10,5 @@ do
    touch ../part2_out/$f.vout
    rm ../part2_out/$f.vout
    echo $f 
-   ../../part2/part2.out $f > ../part2_out/$f.vout
+   ../../part2/part2 $f.pout > ../part2_out/$f.vout
 done

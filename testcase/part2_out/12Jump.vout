@@ -1,0 +1,15 @@
+PRINTING PLAIN INSTRUCTION BUFFER FROM A POUT FILE
+this_should_not_print 
+this_should_print 
+Start 0
+Jump 3
+Prints 0
+Prints 1
+Exit 
+this_should_not_print 
+this_should_print 
+Start 0
+Jump 3
+Prints 0
+Prints 1
+Exit 

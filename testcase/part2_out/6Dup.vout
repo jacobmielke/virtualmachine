@@ -1,0 +1,13 @@
+PRINTING PLAIN INSTRUCTION BUFFER FROM A POUT FILE
+Start 0
+PushI 6
+Dup 
+PrintTOS 
+PrintTOS 
+Exit 
+Start 0
+PushI 6
+Dup 
+PrintTOS 
+PrintTOS 
+Exit 
